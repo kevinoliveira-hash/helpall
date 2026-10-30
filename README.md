@@ -45,3 +45,7 @@ A entrada padrão agora cria um perfil beta local, apenas com nome/apelido e cid
 ## Deploy público na Vercel e avanço
 
 O arquivo `vercel.json` configura o deploy da pasta `dist`. Veja `docs/DEPLOY-VERCEL.md`. O menu **Nosso avanço** reúne etapas entregues e pendentes e métricas locais. Para atualizar o roteiro de entregas, edite `dist/progress.js`; ele não contém dados privados nem totais globais.
+
+## Refinamento 0.4
+
+A camada visual `dist/refinement.css` melhora legibilidade, áreas de toque, cartões e navegação responsiva, preservando os exemplos e fluxos. Veja `docs/REFINAMENTO-UX.md`. Produção: https://helpall-delta.vercel.app/ .

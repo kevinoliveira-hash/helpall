@@ -8,3 +8,6 @@ supabase/.temp/
 coverage/
 test-results/
 .sites-runtime/
+.vercel/
+.vercel
+.env*

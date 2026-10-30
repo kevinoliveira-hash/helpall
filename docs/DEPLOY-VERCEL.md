@@ -22,3 +22,7 @@ O app publicado na Vercel não usa a barreira de login ChatGPT do Sites. Se o pr
 Ainda não há painel central de cadastros, visitantes ou feedback. Esse acompanhamento conjunto será conectado ao banco numa próxima etapa. O beta não coleta senha, e-mail, documento ou pagamentos.
 
 Referência oficial da configuração: https://vercel.com/docs/project-configuration/vercel-json
+
+## Versão publicada
+
+A versão 0.4 refinada está em https://helpall-delta.vercel.app/ . O projeto Vercel `helpall`, na conta `kevin-quintiliano-s-projects`, está conectado ao repositório GitHub. O endereço de produção foi verificado sem autenticação externa. As contas beta continuam locais.

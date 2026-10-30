@@ -1,4 +1,4 @@
-const CACHE = "help-all-demo-v4-beta";
+const CACHE = "help-all-demo-v5-refinement";
 const ASSETS = [
   "./",
   "./index.html",
@@ -25,6 +25,7 @@ ASSETS.push(
   "./auth.css",
   "./beta.js",
   "./progress.js",
+  "./refinement.css",
   "./auth.js",
   "./auth-core.js",
   "./auth-ui.js",
