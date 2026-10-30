@@ -41,3 +41,7 @@ Veja também [Roteiro de apresentação](ROTEIRO-DEMONSTRACAO.md).
 ## Entrada beta para apresentação
 
 A entrada padrão agora cria um perfil beta local, apenas com nome/apelido e cidade, sem senha. O Supabase não é acionado neste modo. Veja `docs/APRESENTAR-BETA.md`. O cadastro autenticado descrito acima está preservado para a próxima etapa; a apresentação atual não cria contas reais nem uma lista central de inscritos.
+
+## Deploy público na Vercel e avanço
+
+O arquivo `vercel.json` configura o deploy da pasta `dist`. Veja `docs/DEPLOY-VERCEL.md`. O menu **Nosso avanço** reúne etapas entregues e pendentes e métricas locais. Para atualizar o roteiro de entregas, edite `dist/progress.js`; ele não contém dados privados nem totais globais.

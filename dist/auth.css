@@ -1054,3 +1054,11 @@
 .beta-shell .auth-card { max-width: 470px; }
 .beta-shell .auth-coin-scene { min-height: 265px; }
 @media(max-width:600px) { .beta-shell .auth-topline { gap: 10px; flex-wrap: wrap; } .beta-summary { gap: 5px; } .beta-summary span { font-size: 10px; padding: 7px; } }
+.release-progress { width: 100%; height: 12px; accent-color: #00aa7d; margin: 18px 0; }
+.milestone-list { display: grid; gap: 0; }
+.milestone { display: flex; gap: 18px; align-items: flex-start; border-top: 1px solid #e4ece9; padding: 18px 0; }
+.milestone > .tag { min-width: 104px; justify-content: center; margin-top: 3px; }
+.milestone h3 { margin: 0 0 5px; font-size: 15px; }
+.milestone p { margin: 0; line-height: 1.65; }
+.progress-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+@media(max-width:480px) { .milestone { flex-direction: column; gap: 9px; } }

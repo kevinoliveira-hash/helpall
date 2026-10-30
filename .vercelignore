@@ -1,0 +1,9 @@
+.git
+.openai
+node_modules
+supabase
+tests
+design-references
+.env
+.env.*
+*.log
