@@ -1,0 +1,12 @@
+{
+  "name":"HELP ALL · Ajudar conecta",
+  "short_name":"HELP ALL",
+  "description":"Ajuda, serviços e conexões no seu bairro. Piloto demonstrativo.",
+  "lang":"pt-BR",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#f6f7f5",
+  "theme_color":"#123f35",
+  "icons":[{"src":"./assets/logo.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

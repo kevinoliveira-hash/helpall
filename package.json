@@ -1,0 +1,12 @@
+{
+  "name": "help-all-pilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "HELP ALL — piloto demonstrativo com Help Coins ilustrativas",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check dist/app.js && node --check dist/store.js && node --check dist/data.js && node --test tests/*.test.mjs"
+  }
+}
