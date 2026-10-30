@@ -1,0 +1,9 @@
+{
+  "folders": [{"name":"HELP ALL · Aplicativo e banco","path":"."}],
+  "settings": {
+    "editor.wordWrap":"on",
+    "explorer.compactFolders":false,
+    "files.exclude":{"node_modules":true},
+    "search.exclude":{"node_modules":true,"dist/vendor":true}
+  }
+}

@@ -1,75 +1,43 @@
-# HELP ALL · primeira versão demonstrativa
+# HELP ALL · piloto 0.2
 
-Uma experiência interativa para apresentar a ideia do HELP ALL aos primeiros 100 convidados: encontrar serviços e oportunidades no bairro, pedir e oferecer ajuda, acompanhar pedidos e experimentar Help Coins.
+Aplicativo para apresentar a proposta aos primeiros 100 convidados: ajuda no bairro, serviços, comunidade e HelpCoins ilustrativas. Interface em azul profundo, verde, turquesa e dourado, baseada nas referências fornecidas.
 
-Esta versão funciona no navegador e guarda a atividade no próprio dispositivo. Os exemplos de parceiros, ofertas, publicações e campanhas são fictícios. O selo dos primeiros 100 apresenta o piloto; ele não representa uma contagem central de inscrições.
+## Abrir e editar
 
-## Como abrir no Windows
+Abra `HELP-ALL.code-workspace` no VS Code. Dê dois cliques em `ABRIR-APP.cmd` ou execute `npm start`. Acesse http://localhost:4173.
 
-1. Tenha o Node.js instalado no computador.
-2. Abra a pasta `help-all` e dê dois cliques em `ABRIR-APP.cmd`.
-3. Mantenha a janela aberta enquanto usa o app. O endereço local é **http://localhost:4173**.
-4. Para encerrar, feche a janela do servidor ou pressione `Ctrl+C` nela.
+Escolha **Conhecer o app sem entrar** para apresentar a demonstração imediatamente. Endereço direto: http://localhost:4173/?demo=1#home.
 
-Outra forma de abrir: no terminal, dentro da pasta `help-all`, execute:
+Edite a interface nos arquivos de `dist/`. O banco está versionado em `supabase/migrations/`.
 
-```text
-npm start
-```
+## Funcionalidades
 
-O app não precisa de instalação de pacotes para iniciar. Abra pelo endereço acima para que os módulos do app funcionem corretamente.
+- Demonstração: catálogo, pesquisa, favoritos, mapa, CEP, pedidos, comunidade e perfil.
+- HelpCoins: carteira, extrato, missões, transferências, doações e cupons simulados. A demonstração inicia com 250 HELP locais.
+- Supabase: cadastro por e-mail, confirmação, login, recuperação de senha e segundo fator TOTP.
+- Conta conectada: perfil e pedidos privados, comunidade de membros aprovados, feedback e carteira protegidos no banco. Contas começam pendentes, com zero HELP. A equipe aprova os participantes.
+- Google preparado no código e identificado como em preparação. O Kevin optou por criar as credenciais posteriormente; o passo a passo está pronto.
 
-## O que é possível experimentar
+Catálogo, parceiros, preços, campanhas e chat são ilustrativos. Pedidos não contratam serviços reais. HelpCoins não têm valor monetário, saque, conversão ou blockchain. Saldos locais nunca são importados para contas.
 
-- Explorar categorias, pesquisar ofertas, ver detalhes e salvar favoritos.
-- Consultar o mapa e escolher a localização pelo CEP.
-- Criar um pedido demonstrativo, acompanhar as etapas, cancelar antes da conclusão e conversar em um chat simulado.
-- Concluir um pedido e receber **25 Help Coins ilustrativas**, uma única vez por pedido.
-- Consultar saldo e extrato, cumprir missões, resgatar cupons e simular transferências e doações de Help Coins.
-- Publicar pedidos de ajuda, ofertas de ajuda e histórias na comunidade; curtir e comentar publicações.
-- Personalizar o perfil, registrar feedback e exportar os dados da demonstração.
+## Configuração
 
-As interações ficam disponíveis para conhecer os fluxos do produto. Um pedido não contrata uma pessoa ou estabelecimento real; as mensagens simulam respostas de parceiros.
+Projeto: https://supabase.com/dashboard/project/cyuethbcmkjvcnwdsttb
 
-## Help Coins nesta versão
+Veja [Configuração e Google](docs/CONFIGURAR-SUPABASE.md) e [Segurança e limites](docs/SEGURANCA.md). O cliente usa apenas chave pública. Nunca coloque senha do banco, service_role ou segredo Google no código.
 
-Cada demonstração nova começa com **250 Help Coins**. Há missões de boas-vindas, perfil, primeiro pedido concluído e participação na comunidade. Cada missão pode ser resgatada uma única vez no perfil local.
+O site hospedado mantém acesso privado para o Kevin apresentar. Isso ainda não libera acesso externo aos 100 convidados. Antes de inscrições abertas, configure envio de e-mails próprio, proteção contra automação e termos/canal de privacidade.
 
-Transferências, doações e resgates descontam o saldo demonstrativo e aparecem no extrato. O app valida valores inteiros e saldo disponível. As doações atualizam apenas a demonstração local; elas não entregam recursos a uma instituição. Cupons não têm validade comercial.
-
-Help Coins **não têm valor monetário nesta versão**. Não há compra, venda, saque, conversão, pagamento real, blockchain, carteira de custódia ou integração operacional com Ripio. As marcas citadas como inspiração não são parceiras nem serviços integrados ao app.
-
-## Dados, privacidade e serviços públicos
-
-Os dados da demonstração são guardados no armazenamento local do navegador. Reabrir o app no mesmo navegador e endereço mantém a atividade enquanto esse armazenamento estiver disponível. Outro navegador, outro dispositivo ou outro endereço terá uma demonstração própria. Limpar os dados do navegador pode apagar essa atividade.
-
-O arquivo exportado é salvo no dispositivo e contém os dados locais da demonstração. Ele não cria uma cópia compartilhada nem sincroniza usuários. O feedback também é local e pode ser levado junto na exportação; ele não é enviado automaticamente para uma equipe.
-
-Os únicos serviços públicos usados na experiência são:
-
-- **ViaCEP:** consulta do CEP informado para obter cidade e bairro.
-- **OpenStreetMap:** visualização do mapa da região selecionada.
-
-Esses recursos dependem de internet e da disponibilidade dos serviços. O CEP consultado é enviado ao ViaCEP; o carregamento do mapa faz uma conexão com o OpenStreetMap. Pedidos, publicações e Help Coins continuam sendo dados locais, sem um servidor de contas do HELP ALL.
-
-## Como apresentar
-
-Use `ROTEIRO-DEMONSTRACAO.md` para uma apresentação de aproximadamente cinco minutos. A mesma versão pode ser mostrada a diferentes convidados para colher suas primeiras impressões. Cada dispositivo mantém sua própria atividade.
+Sessões ficam em memória: atualizar a página exige novo login. Links de confirmação e recuperação devem abrir no navegador que iniciou a solicitação.
 
 ## Verificação
 
-Dentro da pasta `help-all`, execute:
+`npm ci` restaura os pacotes. `npm run build` atualiza o SDK Supabase e ícones Lucide locais. `npm test` executa 36 testes, incluindo PostgreSQL descartável, isolamento entre contas, RLS, MFA, saldo, extrato e proteção contra repetição de operações.
 
-```text
-npm test
-```
+`dist/vendor/` é gerado. As bibliotecas são os projetos oficiais Supabase JS e Lucide, com licenças incluídas. O projeto já tem controle de versões; GitHub e Figma não são necessários para esta apresentação.
 
-Os testes verificam o estado local, saldo e extrato, resgates únicos de missões, etapas de pedidos, persistência, recuperação de dados inválidos, doações e interações da comunidade.
+Veja também [Roteiro de apresentação](ROTEIRO-DEMONSTRACAO.md).
 
-## Próxima etapa para um piloto com 100 usuários conectados
+## Entrada beta para apresentação
 
-Para que pessoas reais interajam entre dispositivos, a próxima etapa é criar um servidor com banco de dados e autenticação. Isso inclui cadastro e acesso de usuários, pedidos e conversas compartilhados, moderação e denúncias, operação de parceiros, tratamento de feedback e acompanhamento do piloto.
-
-O saldo, as transferências e as recompensas de Help Coins precisam ser validados no servidor antes de terem uso compartilhado. Pagamentos reais, identidade de parceiros e qualquer eventual uso financeiro exigem implementação e validação próprias.
-
-Esta entrega é a base demonstrativa para revisar a experiência, apresentar a proposta e decidir as prioridades dessa próxima etapa.
+A entrada padrão agora cria um perfil beta local, apenas com nome/apelido e cidade, sem senha. O Supabase não é acionado neste modo. Veja `docs/APRESENTAR-BETA.md`. O cadastro autenticado descrito acima está preservado para a próxima etapa; a apresentação atual não cria contas reais nem uma lista central de inscritos.
